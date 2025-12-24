@@ -126,7 +126,7 @@ export default function App() {
         }}
       >
         <motion.img
-          src="/santa.png"
+          src={`${import.meta.env.BASE_URL}santa.png`}
           alt="Play Music"
           className={`icon-btn ${isPlaying ? 'playing' : ''}`}
           whileHover={{ scale: 1.1 }}
