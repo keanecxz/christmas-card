@@ -28,7 +28,7 @@ export default function FloatingSf() {
             {icons.map((icon) => (
                 <motion.img
                     key={icon.id}
-                    src="/sf.png"
+                    src={`${import.meta.env.BASE_URL}sf.png`}
                     alt="Floating Icon"
                     initial={{ opacity: 1, rotateY: 0 }}
                     animate={{

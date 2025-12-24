@@ -54,7 +54,7 @@ export default function ChristmasCard({ open, onClose }) {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              backgroundImage: "url('/big-card.png')",
+              backgroundImage: `url('${import.meta.env.BASE_URL}big-card.png')`,
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",

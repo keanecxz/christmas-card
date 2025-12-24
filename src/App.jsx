@@ -13,7 +13,7 @@ export default function App() {
   const [currentImg, setCurrentImg] = useState(0);
   const [clicks, setClicks] = useState([]);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const { isReady, isPlaying, start, toggle } = useAudio("/music.mp3");
+  const { isReady, isPlaying, start, toggle } = useAudio(`${import.meta.env.BASE_URL}music.mp3`);
 
   const panelRef = useRef(null);
   const containerRef = useRef(null);
@@ -61,7 +61,7 @@ export default function App() {
       <div className="content">
         {/* Oscillating Mt */}
         <motion.img
-          src="/mt.png"
+          src={`${import.meta.env.BASE_URL}mt.png`}
           alt="Mt"
           animate={{
             y: [0, -20, 0],
@@ -90,7 +90,7 @@ export default function App() {
             onClick={handleImageClick}
           >
             <img
-              src={images[currentImg]}
+              src={`${import.meta.env.BASE_URL}${images[currentImg]}`}
               alt="Christmas Scene"
               className="main-image"
             />
@@ -138,7 +138,7 @@ export default function App() {
           }}
         />
         <motion.img
-          src="/card.png"
+          src={`${import.meta.env.BASE_URL}card.png`}
           alt="Open Card"
           className="icon-btn"
           whileHover={{ scale: 1.1 }}

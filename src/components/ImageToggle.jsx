@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function ImageToggle() {
   const [which, setWhich] = useState(0);
-  const images = ["/img1.jpg", "/img2.jpg"];
+  const images = ["img1.jpg", "img2.jpg"];
 
   return (
     <div
@@ -30,7 +30,7 @@ export default function ImageToggle() {
         <AnimatePresence mode="wait">
           <motion.img
             key={which}
-            src={images[which]}
+            src={`${import.meta.env.BASE_URL}${images[which]}`}
             alt="toggle"
             style={{
               width: "100%",
